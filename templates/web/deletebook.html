@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <form method="post">{% csrf_token %}
+                <p>Are you sure you want to delete "{{ object }}"?</p>
+                <div class="buttons mt-5">
+                  <button type="submit" class="btn btn-gradient-danger">yes</button>
+                  <button type="button" onclick="history.back()" class="btn btn-light btn-outline-secondary"></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
